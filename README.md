@@ -1,4 +1,4 @@
-Comparte Ride
+Service Manage
 =============
 
-Group-bounded, invite-only, carpooling platform
+App for manage of cnc's services
