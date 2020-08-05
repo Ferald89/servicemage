@@ -32,10 +32,10 @@ class User(SManageModel, AbstractUser):
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
-    # is_admin = models.BooleanField(
-    #     default=False,
-    #     help_text='Set to true when the user is a an admin'
-    # )
+    is_admin = models.BooleanField(
+        default=False,
+        help_text='Set to true when the user is a an admin'
+    )
 
     def ___str__(self):
         return self.username

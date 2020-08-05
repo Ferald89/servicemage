@@ -17,6 +17,12 @@ class Machine(SManageModel):
     picture = models.ImageField(upload_to='machine/picture', blank=True, null=True)
     next_service = models.DateTimeField()
 
+    owner = models.ForeignKey(
+                        "users.User",
+                        on_delete=models.CASCADE,
+                        null=True
+                )
+
     def __str__(self):
         """Return Machine name."""
         return self.name
