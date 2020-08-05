@@ -24,13 +24,14 @@ class UserModelSerializer(serializers.ModelSerializer):
         """Meta class."""
         model = User
         fields = (
-              'username',
-              'first_name',
-              'last_name',
-              'email',
-              'phone_number',
-              'profile'
-              )
+            'id',
+            'username',
+            'first_name',
+            'last_name',
+            'email',
+            'phone_number',
+            'profile'
+            )
 
 
 class UserSignUpSerializer(serializers.Serializer):

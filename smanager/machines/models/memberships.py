@@ -24,6 +24,12 @@ class Membership(SManageModel):
                         help_text='Only active user ar allowed to interact with the machine'
     )
 
+    is_owner = models.BooleanField(
+        'machine admin',
+        default=False,
+        help_text="Machine admin can see you detail"
+        )
+
     def __str__(self):
         """Return username and machine."""
         return '@{} at #{}'.format(
