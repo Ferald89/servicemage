@@ -93,7 +93,8 @@ MIDDLEWARE = [
 STATIC_ROOT = str(ROOT_DIR('staticfiles'))
 STATIC_URL = '/static/'
 STATICFILES_DIRS = [
-    str(APPS_DIR.path('static')),
+    # str(APPS_DIR.path('static')),
+    str(APPS_DIR.path('../frontend/build/static')),
 ]
 STATICFILES_FINDERS = [
     'django.contrib.staticfiles.finders.FileSystemFinder',
@@ -109,7 +110,8 @@ TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
         'DIRS': [
-            str(APPS_DIR.path('templates')),
+            # str(APPS_DIR.path('templates')),
+            str(APPS_DIR.path('../frontend/build')),
         ],
         'OPTIONS': {
             'debug': DEBUG,
