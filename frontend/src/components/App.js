@@ -2,7 +2,7 @@ import React from 'react';
 import Layout from './Layout';
 import {BrowserRouter, Switch, Route} from 'react-router-dom';
 import Home from '../pages/Home';
-// import Projects from '../pages/Projects';
+import Feed from '../pages/Feed';
 import Signup from '../pages/Signup';
 
 
@@ -13,7 +13,7 @@ function App() {
       <Switch>
         <Route exact path="/" component={Home}/>
         <Route exact path="/Signup" component={Signup}/>
-        {/* <Route exact path="/Projects/" component={Projects}/> */}
+        <Route exact path="/Feed" component={Feed}/>
       </ Switch>
     </Layout>
     </BrowserRouter>

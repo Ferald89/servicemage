@@ -4,6 +4,8 @@ import './styles/Signup.css'
 import platziconfLogoImage from '../images/logod.svg';
 import SignupForm from '../components/SignupForm';
 import api from '../api';
+import MiniLoader from '../components/MiniLoader';
+
 
 
 
@@ -73,6 +75,7 @@ class Signup extends React.Component{
                             formValues={this.state.form}
                             error={this.state.error}
                         />
+                        {this.state.loading && <MiniLoader />}
                         </div>
                     </div>
                 </div>

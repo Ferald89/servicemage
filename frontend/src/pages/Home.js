@@ -35,11 +35,13 @@ class Home extends React.Component{
 
     try{
       const data = await api.badges.login(this.state.form);
-      this.setState({loading: false});
+      this.setState({loading: false, access_token: ""});
+      console.log(data)
       if (data.status){
-        this.setState({access_token: data.body.access_token})
-        localStorage.setItem('access_token', this.state.access_token);
-        this.props.history.push('/Projects/');
+        console.log(data.body.acces_token);
+        this.setState({access_token: data.body.acces_token})
+        localStorage.setItem('access_token', data.body.acces_token);
+        this.props.history.push('/feed');
       }else{
         const error = data.body;
         this.setState({error: error});

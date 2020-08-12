@@ -15,6 +15,11 @@ ALLOWED_HOSTS = [
     "192.168.40.89",
 ]
 
+# Cors
+CORS_ORIGIN_WHITELIST = [
+    "http://localhost:3000",
+]
+
 # Cache
 CACHES = {
     'default': {
@@ -32,7 +37,11 @@ EMAIL_HOST = 'localhost'
 EMAIL_PORT = 1025
 
 # django-extensions
-INSTALLED_APPS += ['django_extensions']  # noqa F405
+INSTALLED_APPS += ['django_extensions', 'corsheaders']  # noqa F405
+
+# Middlewares
+MIDDLEWARE += ['corsheaders.middleware.CorsMiddleware'] # noqa F405
+
 
 # Celery
 CELERY_TASK_ALWAYS_EAGER = True
