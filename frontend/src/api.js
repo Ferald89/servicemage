@@ -40,6 +40,12 @@ const api = {
         body: JSON.stringify(badge)
       });
     },
+    signup(badge) {
+      return callApi('/users/signup/',{
+        method: 'POST',
+        body: JSON.stringify(badge)
+      });
+    },
     read(badgeId) {
       return callApi(`/badges/${badgeId}`);
     },

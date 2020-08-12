@@ -8,10 +8,10 @@ class Navbar extends React.Component{
         return(
             <div className="Navbar" >
                 <div className="container-fluid">
-                    <Link>
+                    <Link to="">
                         <img className="Navbar__brand-logo" src={logo} alt="Logo"/>
                         <span className="font-weight-light">Deica</span>
-                        <span className="font-weight-bold">Project Managment</span>
+                        <span className="font-weight-bold">ServiceManagment</span>
                     </Link>
                 </div>
             </div>);
