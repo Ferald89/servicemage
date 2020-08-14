@@ -8,7 +8,7 @@ const simulateNetworkLatency = (min = 30, max = 1500) =>
   delay(randomNumber(min, max));
 
 async function callApi(endpoint, options = {}) {
-  // await simulateNetworkLatency(); 
+  await simulateNetworkLatency(); 
   console.log(localStorage.getItem("access_token"));
   const token = "fe8901be5ba7f78a884400cce8c08e829de7f237";
   // const token = localStorage.getItem("acess_token");
