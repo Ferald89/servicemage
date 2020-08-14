@@ -1,5 +1,5 @@
-const BASE_URL = 'https://servicemante.ga';
-// const BASE_URL = 'http://localhost:8000';
+// const BASE_URL = 'https://servicemante.ga';
+const BASE_URL = 'http://localhost:8000';
 
 const delay = ms => new Promise(resolve => setTimeout(resolve, ms));
 const randomNumber = (min = 0, max = 1) =>
@@ -9,14 +9,24 @@ const simulateNetworkLatency = (min = 30, max = 1500) =>
 
 async function callApi(endpoint, options = {}) {
   await simulateNetworkLatency(); 
-  console.log(localStorage.getItem("access_token"));
-  const token = "fe8901be5ba7f78a884400cce8c08e829de7f237";
-  // const token = localStorage.getItem("acess_token");
-  options.headers = {
-    'Content-Type': 'application/json',
-    'Authorization': 'Token '+token,
-    Accept: 'application/json',
-  };
+  // console.log(localStorage.getItem("access_token"));
+  // let token = "fe8901be5ba7f78a884400cce8c08e829de7f237";
+  let token = localStorage.getItem("access_token");
+  // console.log("este es el token " + token);
+  if (token){
+
+    options.headers = {
+      'Content-Type': 'application/json',
+      'Authorization': 'Token '+token,
+      Accept: 'application/json',
+    };
+  }
+  else{
+    options.headers = {
+      'Content-Type': 'application/json',
+      Accept: 'application/json',
+    };
+  }
 
   const url = BASE_URL + endpoint;
   const response = await fetch(url, options);

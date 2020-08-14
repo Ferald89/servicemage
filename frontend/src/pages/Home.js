@@ -36,9 +36,9 @@ class Home extends React.Component{
     try{
       const data = await api.badges.login(this.state.form);
       this.setState({loading: false, access_token: ""});
-      console.log(data)
+      // console.log(data)
       if (data.status){
-        console.log(data.body.acces_token);
+        // console.log(data.body.acces_token);
         this.setState({access_token: data.body.acces_token})
         localStorage.setItem('access_token', data.body.acces_token);
         this.props.history.push('/feed');
