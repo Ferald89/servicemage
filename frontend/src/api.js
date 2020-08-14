@@ -8,7 +8,7 @@ const simulateNetworkLatency = (min = 30, max = 1500) =>
   delay(randomNumber(min, max));
 
 async function callApi(endpoint, options = {}) {
-  await simulateNetworkLatency(); 
+  // await simulateNetworkLatency(); 
   // console.log(localStorage.getItem("access_token"));
   // let token = "fe8901be5ba7f78a884400cce8c08e829de7f237";
   let token = localStorage.getItem("access_token");
@@ -59,8 +59,8 @@ const api = {
         body: JSON.stringify(badge)
       });
     },
-    read(badgeId) {
-      return callApi(`/badges/${badgeId}`);
+    read(machineserial_number) {
+      return callApi(`/machines/${machineserial_number}/`);
     },
     update(badgeId, updates) {
       return callApi(`/badges/${badgeId}`, {
