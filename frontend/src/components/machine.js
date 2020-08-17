@@ -1,13 +1,12 @@
 import React from 'react';
 
-// import './styles/Badge.css';
+import './styles/Badge.css';
 
-import conflogo from '../images/badge-header.svg';
 // import Gravatar from './Gravatar';
 
 class Machine extends React.Component{
     render(){
-        let {name, model, about, next_service, serial_number, email, name_user} = this.props;
+        let {model, about, next_service, serial_number, email, name_user} = this.props;
 
         return <div className="Badge">
             <div className="Badge__header">

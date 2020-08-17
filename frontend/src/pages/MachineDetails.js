@@ -2,14 +2,16 @@ import React from 'react';
 // import ReactDOM from 'react-dom';
 // import { Link } from 'react-router-dom';
 
-// import './styles/BadgeDetails.css';
+import './styles/BadgeDetails.css';
 // import confLogo from '../images/platziconf-logo.svg';
 import Machine from '../components/machine';
+import ServicesList from '../components/ServicesList';
+
 
 function MachineDetails(props) {
   const machine = props.machine;
-  console.log(machine);
-  console.log(machine.user[0].email);
+  const services = props.services.body.results;
+  
 
   return (
     <div>
@@ -44,7 +46,10 @@ function MachineDetails(props) {
             />
           </div>
           <div className="col">
-            <h2>Actions</h2>
+            <h2>Servicios</h2>
+            <div >
+              <ServicesList services={services}/>
+            </div>
             <div>
 
               {/* <div>

@@ -1,29 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.d3db8f29.chunk.css",
-    "main.js": "/static/js/main.19ec61bd.chunk.js",
-    "main.js.map": "/static/js/main.19ec61bd.chunk.js.map",
+    "main.css": "/static/css/main.d87c3aba.chunk.css",
+    "main.js": "/static/js/main.185cedf5.chunk.js",
+    "main.js.map": "/static/js/main.185cedf5.chunk.js.map",
     "runtime-main.js": "/static/js/runtime-main.c8a21426.js",
     "runtime-main.js.map": "/static/js/runtime-main.c8a21426.js.map",
     "static/css/2.f3cffc9e.chunk.css": "/static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.495b5042.chunk.js": "/static/js/2.495b5042.chunk.js",
-    "static/js/2.495b5042.chunk.js.map": "/static/js/2.495b5042.chunk.js.map",
+    "static/js/2.557f2484.chunk.js": "/static/js/2.557f2484.chunk.js",
+    "static/js/2.557f2484.chunk.js.map": "/static/js/2.557f2484.chunk.js.map",
     "index.html": "/index.html",
-    "precache-manifest.8f0b022549799ae770c095d64e0e0218.js": "/precache-manifest.8f0b022549799ae770c095d64e0e0218.js",
+    "precache-manifest.13f7dd78089220765e01056e7e53bfc3.js": "/precache-manifest.13f7dd78089220765e01056e7e53bfc3.js",
     "service-worker.js": "/service-worker.js",
     "static/css/2.f3cffc9e.chunk.css.map": "/static/css/2.f3cffc9e.chunk.css.map",
-    "static/css/main.d3db8f29.chunk.css.map": "/static/css/main.d3db8f29.chunk.css.map",
-    "static/js/2.495b5042.chunk.js.LICENSE.txt": "/static/js/2.495b5042.chunk.js.LICENSE.txt",
+    "static/css/main.d87c3aba.chunk.css.map": "/static/css/main.d87c3aba.chunk.css.map",
+    "static/js/2.557f2484.chunk.js.LICENSE.txt": "/static/js/2.557f2484.chunk.js.LICENSE.txt",
     "static/media/badge-header.svg": "/static/media/badge-header.973f5842.svg",
     "static/media/hero-image.svg": "/static/media/hero-image.f8a901ce.svg",
     "static/media/logod.svg": "/static/media/logod.ec8d5b49.svg",
-    "static/media/Signup.css": "/static/media/stars.1d17360a.svg"
+    "static/media/noimagen.jpg": "/static/media/noimagen.ff4cebf1.jpg",
+    "static/media/BadgeDetails.css": "/static/media/stars.1d17360a.svg"
   },
   "entrypoints": [
     "static/js/runtime-main.c8a21426.js",
     "static/css/2.f3cffc9e.chunk.css",
-    "static/js/2.495b5042.chunk.js",
-    "static/css/main.d3db8f29.chunk.css",
-    "static/js/main.19ec61bd.chunk.js"
+    "static/js/2.557f2484.chunk.js",
+    "static/css/main.d87c3aba.chunk.css",
+    "static/js/main.185cedf5.chunk.js"
   ]
 }

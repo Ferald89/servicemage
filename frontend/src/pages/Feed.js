@@ -57,11 +57,11 @@ class Feed extends  React.Component{
             <React.Fragment>
                 <div className="Machines">
                     <div className="Machines__container">
-                        <div className="Machines__buttons">
-                            <Link to="/machine/new" className="btn btn-primary">
+                        {/* <div className="Machines__buttons">
+                            <Link to="/machines/new" className="btn btn-primary">
                                 Agregar Máquina
                             </Link>
-                        </div>
+                        </div> */}
                     </div>
                     <MachinesList machines={this.state.data.body.results}/>
                 </div>

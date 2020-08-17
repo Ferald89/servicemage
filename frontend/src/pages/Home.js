@@ -73,11 +73,11 @@ class Home extends React.Component{
                   error={this.state.error}
                   />
                   {this.state.loading && <MiniLoader />}
-                <p className="Home_signup">¿Aún no tienes cuenta?   
+                {/* <p className="Home_signup">¿Aún no tienes cuenta?   
                     <Link to="/signup">
                         Registrate
                     </Link>
-                </p>
+                </p> */}
                 </div>
     
                 <div className="Home__col d-none d-md-block col-md-8">

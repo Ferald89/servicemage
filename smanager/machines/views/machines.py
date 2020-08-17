@@ -21,6 +21,7 @@ class MachineViewSet(
                     mixins.RetrieveModelMixin,
                     mixins.UpdateModelMixin,
                     mixins.ListModelMixin,
+                    mixins.DestroyModelMixin,
                     viewsets.GenericViewSet):
     """Project view set."""
     serializer_class = MachineModelSerializer

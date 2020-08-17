@@ -11,6 +11,7 @@ class MachineDetailsContainer extends React.Component {
     loading: true,
     error: null,
     data: undefined,
+    service: undefined,
   };
 
   componentDidMount() {
@@ -19,14 +20,12 @@ class MachineDetailsContainer extends React.Component {
 
   fetchData = async () => {
     this.setState({ loading: true, error: null });
-    console.log("jell");
     
     console.log(this.props.match.params.machineserial_number);
     try {
       const data = await api.badges.read(this.props.match.params.machineserial_number);
-      console.log("entroo");
-      console.log(data.body);
-      this.setState({ loading: false, data: data.body});
+      const services = await api.badges.readservice(this.props.match.params.machineserial_number);
+      this.setState({ loading: false, data: data.body, services: services});
     } catch (error) {
       this.setState({ loading: false, error: error });
     }
@@ -46,7 +45,7 @@ class MachineDetailsContainer extends React.Component {
       return <PageError error={this.state.error} />;
     }
 
-    return <MachineDetails machine={this.state.data} />;
+    return <MachineDetails machine={this.state.data} services={this.state.services}/>;
   }
 }
 

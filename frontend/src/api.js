@@ -62,6 +62,9 @@ const api = {
     read(machineserial_number) {
       return callApi(`/machines/${machineserial_number}/`);
     },
+    readservice(machineserial_number) {
+      return callApi(`/machines/${machineserial_number}/services/`);
+    },
     update(badgeId, updates) {
       return callApi(`/badges/${badgeId}`, {
         method: 'PUT',
