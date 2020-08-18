@@ -11,4 +11,4 @@ django-storages[boto3]==1.9.1
 django-anymail[mailgun]==5.0
 
 # django
-argon2-cffi==20.1.0
+argon2-cffi==20.1.1
