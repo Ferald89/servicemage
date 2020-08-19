@@ -18,7 +18,9 @@ PyJWT == 1.7.1
 django-environ==0.4.5
 
 # Passwords security
-argon2-cffi==18.3.0
+argon2-cffi==20.1.0
+cffi==1.14.2
+pycparser==2.20
 
 # Static files
 whitenoise==5.2.0
