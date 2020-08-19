@@ -43,6 +43,7 @@ function MachineDetails(props) {
               serial_number={machine.machine.serial_number}
               email={machine.user[0].email}
               name_user={machine.user[0].first_name}
+              picture={machine.machine.picture}
             />
           </div>
           <div className="col">

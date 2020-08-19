@@ -13,6 +13,11 @@
     display: flex;
     justify-content: center;
   }
+
+  .machineimage{
+    width: 10rem;
+    height: 10rem;
+  }
   
   .Badge__section-name {
     display: flex;

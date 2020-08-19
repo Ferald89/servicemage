@@ -6,17 +6,15 @@ import './styles/Badge.css';
 
 class Machine extends React.Component{
     render(){
-        let {model, about, next_service, serial_number, email, name_user} = this.props;
+        let {model, about, next_service, serial_number, email, name_user, picture} = this.props;
+        console.log("heloo "+picture);
 
         return <div className="Badge">
-            <div className="Badge__header">
-                {/* <img src={conflogo} alt="Logo de conferencia"/> */}
-            </div>
+
 
             <div className="Badge__section-name">
-                {/* <Gravatar className="Badge__avatar" email={this.props.email} /> */}
+                <img src={picture} alt="image" className="machineimage"/>
         <h1>
-            {/* {name} */}
             <br/>{model}
         </h1>
             </div>
@@ -29,9 +27,6 @@ class Machine extends React.Component{
                 <div>{name_user}</div>
             </div>
 
-            <div className="Badge__footer">
-                #platziconf
-            </div>
         </div>;
     }
 }
