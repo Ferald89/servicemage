@@ -15,10 +15,10 @@ class Profile(SManageModel):
 
     user = models.OneToOneField('users.User', on_delete=models.CASCADE)
 
-    adress = models.CharField(max_length=255)
+    adress = models.CharField('Dirección', max_length=255)
 
     picture = models.ImageField(
-                'Profile picture',
+                'Imagen de Perfil',
                 upload_to='users/picture/',
                 blank=True,
                 null=True

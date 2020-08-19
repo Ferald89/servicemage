@@ -25,7 +25,7 @@ class Comment(SManageModel):
     )
 
     is_active = models.BooleanField(
-                'active status',
+                'Es Activo',
                 default=True,
                 help_text='used fot disabiling when the service was done'
     )

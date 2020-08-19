@@ -19,13 +19,13 @@ class Membership(SManageModel):
 
     # Status
     is_active = models.BooleanField(
-                        'active status',
+                        'Es Activo',
                         default=True,
                         help_text='Only active user ar allowed to interact with the machine'
     )
 
     is_owner = models.BooleanField(
-        'machine admin',
+        'Es Propietario de la máquina',
         default=False,
         help_text="Machine admin can see you detail"
         )

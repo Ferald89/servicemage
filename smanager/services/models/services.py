@@ -21,13 +21,13 @@ class Service(SManageModel):
                         on_delete=models.SET_NULL,
                         null=True
                     )
-    name = models.CharField('services name', max_length=140)
+    name = models.CharField('Nombre Del Servicio', max_length=140)
 
-    about = models.TextField(blank=True)
+    about = models.TextField('Acerca del service', blank=True)
     # status
 
     is_active = models.BooleanField(
-                'active status',
+                'Es usuario activo',
                 default=True,
                 help_text='used fot disabiling when the service was done'
     )

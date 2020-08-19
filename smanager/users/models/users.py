@@ -15,7 +15,7 @@ class User(SManageModel, AbstractUser):
     to email and add some extra fields
     """
     email = models.EmailField(
-        'email dress',
+        'Email',
         unique=True,
         error_messages={
                         'unique': 'A USer with that email already exist.'
@@ -27,7 +27,7 @@ class User(SManageModel, AbstractUser):
          message="Phone number must be entered in the format: +9999999. up to 15 digits allowed."
          )
 
-    phone_number = models.CharField(validators=[phone_regex], max_length=17, blank=True)
+    phone_number = models.CharField('Telefono', validators=[phone_regex], max_length=17, blank=True)
 
     USERNAME_FIELD = 'email'
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
