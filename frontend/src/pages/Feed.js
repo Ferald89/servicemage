@@ -1,10 +1,8 @@
 import React from "react";
-import { Link } from 'react-router-dom';
 
 
 // Local
 import './styles/Machines.css';
-// import MiniLoader from '../components/MiniLoader';
 import PageLoading from '../components/PageLoading';
 import MachinesList from '../components/MachinesList';
 import api from '../api'

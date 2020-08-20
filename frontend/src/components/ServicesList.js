@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 
 // import './styles/MachinesList.css';
 
@@ -39,7 +38,12 @@ class ServicesList extends React.Component {
           {this.props.services.map(service => {
             return (
               <li key={service.id}>
+                  {service.is_active && this.props.is_active &&
                   <ServicesListItem service={service} />
+                  }
+                  {!service.is_active && !this.props.is_active &&
+                  <ServicesListItem service={service} />
+                  }
               </li>
             );
           })}

@@ -13,13 +13,15 @@ class Service(SManageModel):
     owner_machine = models.ForeignKey(
                     "users.User",
                     on_delete=models.SET_NULL,
-                    null=True
+                    null=True,
+                    verbose_name='Propietario de la Máquina'
     )
 
     order_in = models.ForeignKey(
                         "machines.Machine",
                         on_delete=models.SET_NULL,
-                        null=True
+                        null=True,
+                        verbose_name='Servició ordenado en la máquina'
                     )
     name = models.CharField('Nombre Del Servicio', max_length=140)
 
@@ -27,14 +29,14 @@ class Service(SManageModel):
     # status
 
     is_active = models.BooleanField(
-                'Es usuario activo',
+                'El Servicio esta activo',
                 default=True,
                 help_text='used fot disabiling when the service was done'
     )
 
-    taked_at = models.DateTimeField(null=True)
+    taked_at = models.DateTimeField(verbose_name='Tomado en', null=True, blank=True)
 
-    service_date = models.DateTimeField()
+    service_date = models.DateTimeField(verbose_name='Fecha del servicio')
 
     def __str__(self):
         """Return the service details."""

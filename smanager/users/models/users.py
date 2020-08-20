@@ -33,6 +33,7 @@ class User(SManageModel, AbstractUser):
     REQUIRED_FIELDS = ['username', 'first_name', 'last_name']
 
     is_admin = models.BooleanField(
+        verbose_name='Es Administrador',
         default=False,
         help_text='Set to true when the user is a an admin'
     )

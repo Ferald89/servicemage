@@ -1,4 +1,4 @@
-"""Projects views."""
+"""Machine views."""
 
 # Django REST Framework
 from rest_framework import viewsets, mixins
@@ -29,7 +29,7 @@ class MachineViewSet(
 
     def get_queryset(self):
         """Restric list to public only"""
-        queryset = Machine.objects.all()
+        queryset = Machine.objects.filter(owner=self.request.user)
         if self.action == 'list':
             # chenge to is public project
             return queryset

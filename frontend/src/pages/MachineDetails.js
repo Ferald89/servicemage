@@ -19,13 +19,12 @@ function MachineDetails(props) {
         <div className="container">
           <div className="row">
             <div className="col-6">
-              {/* <img src={confLogo} alt="Logo de la Conferencia" /> */}
-                <h1>{machine.machine.name}</h1>
+                <h1> Nombre: {machine.machine.name}</h1>
             </div>
             <div className="col-6 BadgeDetails__hero-attendant-name">
               <h1>
-                {machine.machine.model}  <br/>
-                 {machine.machine.serial_number}
+                Modelo: {machine.machine.model}  <br/>
+                 Serial: {machine.machine.serial_number}
               </h1>
             </div>
           </div>
@@ -47,9 +46,11 @@ function MachineDetails(props) {
             />
           </div>
           <div className="col">
-            <h2>Servicios</h2>
+              <h2>Servicios no realizados</h2>
+              <ServicesList services={services} is_active={true}/>
+            <h2>Servicios realizados</h2>
             <div >
-              <ServicesList services={services}/>
+              <ServicesList services={services} is_active={false}/>
             </div>
             <div>
 

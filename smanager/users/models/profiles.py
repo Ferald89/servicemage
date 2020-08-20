@@ -13,7 +13,7 @@ class Profile(SManageModel):
     an statics.
     """
 
-    user = models.OneToOneField('users.User', on_delete=models.CASCADE)
+    user = models.OneToOneField('users.User', on_delete=models.CASCADE, verbose_name='Usuario')
 
     adress = models.CharField('Dirección', max_length=255)
 
@@ -25,9 +25,9 @@ class Profile(SManageModel):
     )
 
     # stats
-    machines_taken = models.PositiveIntegerField(default=0)
+    machines_taken = models.PositiveIntegerField(default=0, verbose_name='Máquinas obtenidas')
 
-    service_taken = models.PositiveIntegerField(default=0)
+    service_taken = models.PositiveIntegerField(default=0, verbose_name='Servicios tomados')
 
     def __str__(self):
         """Return user's"""

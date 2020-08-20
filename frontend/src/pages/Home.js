@@ -7,7 +7,6 @@ import astronautsImage from '../images/hero-image.svg';
 import LoginForm from '../components/LoginForm';
 import api from '../api';
 import MiniLoader from '../components/MiniLoader';
-import { Link } from 'react-router-dom';
 
 class Home extends React.Component{
   state = {

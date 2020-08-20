@@ -20,7 +20,8 @@ class Machine(SManageModel):
     owner = models.ForeignKey(
                         "users.User",
                         on_delete=models.CASCADE,
-                        null=False
+                        null=False,
+                        verbose_name='Propietario'
                 )
 
     def __str__(self):
