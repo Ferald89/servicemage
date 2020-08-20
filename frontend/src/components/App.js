@@ -15,8 +15,8 @@ function App() {
         <Route exact path="/" component={Home}/>
         <Route exact path="/Signup" component={Signup}/>
         <Route exact path="/Feed" component={Feed}/>
-        <Route exact path="/machines/new" component={MachineNew}/>
-        <Route exact path="/machines/:machineserial_number" component={MachineDetails}/>
+        <Route exact path="/feed/machines/new" component={MachineNew}/>
+        <Route exact path="/feed/machines/:machineserial_number" component={MachineDetails}/>
       </ Switch>
     </Layout>
     </BrowserRouter>

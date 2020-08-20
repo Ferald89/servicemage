@@ -10,9 +10,29 @@ from django.views.generic import TemplateView
 urlpatterns = [
     # Django Admin
     path(settings.ADMIN_URL, admin.site.urls),
-    path('', TemplateView.as_view(template_name='index.html')),
-    path('', include(('smanager.users.urls', 'users'), namespace='users')),
-    path('', include(('smanager.machines.urls', 'machines'), namespace='machines')),
-    path('', include(('smanager.services.urls', 'services'), namespace='services')),
+    path(
+        '',
+        TemplateView.as_view(template_name='index.html'),
+        name='login'),
+    path(
+        'feed',
+        TemplateView.as_view(template_name='index.html'),
+        name='feed'),
+    path(
+        'feed/machines/<str:machine>',
+        TemplateView.as_view(template_name='index.html'),
+        name='machine_detail'),
+    path(
+        '',
+        include(('smanager.users.urls', 'users'),
+                namespace='users')),
+    path(
+        '',
+        include(('smanager.machines.urls', 'machines'),
+                namespace='machines')),
+    path(
+        '',
+        include(('smanager.services.urls', 'services'),
+                namespace='services')),
 
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

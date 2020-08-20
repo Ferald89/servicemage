@@ -2,8 +2,11 @@
     width: 100%;
     padding: 0.5rem 0;
     background-color: #1C3643;
+    display: block;
   }
-  
+  .container-fluid{
+    width: 80%;
+  }
   .Navbar__brand {
     color: #ffffff;
   

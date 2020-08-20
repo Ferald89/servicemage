@@ -72,7 +72,7 @@ class MachinesList extends React.Component {
               <li key={machine.serial_number}>
                 <Link
                   className="text-reset text-decoration-none"
-                  to={`/machines/${machine.serial_number}`}
+                  to={`/feed/machines/${machine.serial_number}`}
                 >
                   <MAchinesListItem machine={machine} />
                 </Link>
