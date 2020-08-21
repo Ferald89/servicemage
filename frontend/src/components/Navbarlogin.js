@@ -17,15 +17,6 @@ class Navbar extends React.Component{
                         {/* <div className="row containernav"> */}
                             <div className="col-10 containernav">
                                     <img className="Navbar__brand-logo" src={logo} alt="Logo"/>
-                                <Link className="" to="/feed">
-                                    <span className="font-weight-light">Deica</span>
-                                    <span className="font-weight-bold">ServiceManagment</span>
-                                </Link>
-                            </div>
-                            <div className="col-2">
-                                <button className="logout" onClick={this.handleSubmit}>
-                                    <p>Salir</p>
-                                </button>
                             </div>
                         </div>
                 {/* </div> */}

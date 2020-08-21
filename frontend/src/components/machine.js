@@ -22,11 +22,11 @@ class Machine extends React.Component{
             </div>
 
             <div className="Badge__section-info">
-                <h3>Descripción: {about}</h3>
+                <h3>Dueño: {name_user}</h3>
                 {/* <div>{next_service}</div> */}
                 {/* <div>{serial_number}</div> */}
                 {/* <div>{email}</div> */}
-            <div>Dueño: {name_user}</div>
+            <div>Descripción: {about}</div>
             </div>
 
         </div>;

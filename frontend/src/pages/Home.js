@@ -7,6 +7,7 @@ import astronautsImage from '../images/hero-image.svg';
 import LoginForm from '../components/LoginForm';
 import api from '../api';
 import MiniLoader from '../components/MiniLoader';
+import Navbar from '../components/Navbarlogin'
 
 class Home extends React.Component{
   state = {
@@ -54,6 +55,7 @@ class Home extends React.Component{
     render(){
         return(
           <React.Fragment>
+            <Navbar />
             <div className="Home">
             <div className="container">
               <div className="row">

@@ -3,7 +3,6 @@ import React from 'react';
 // import { Link } from 'react-router-dom';
 
 import './styles/BadgeDetails.css';
-// import confLogo from '../images/platziconf-logo.svg';
 import Machine from '../components/machine';
 import ServicesList from '../components/ServicesList';
 
@@ -16,12 +15,12 @@ function MachineDetails(props) {
   return (
     <div>
       <div className="BadgeDetails__hero">
-        <div className="container">
+        <div className="container-fluid">
           <div className="row">
-            <div className="col-6">
+            <div className="col-5">
                 <h1> Nombre: {machine.machine.name}</h1>
             </div>
-            <div className="col-6 BadgeDetails__hero-attendant-name">
+            <div className="col-7 BadgeDetails__hero-attendant-name">
               <h1>
                 Modelo: {machine.machine.model}  <br/>
                  Serial: {machine.machine.serial_number}
@@ -31,9 +30,9 @@ function MachineDetails(props) {
         </div>
       </div>
 
-      <div className="container">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col">
+          <div className="col-12 col-md-5">
             <Machine
               name={machine.machine.name}
               model={machine.machine.model}
@@ -45,7 +44,7 @@ function MachineDetails(props) {
               picture={machine.machine.picture}
             />
           </div>
-          <div className="col">
+          <div className="col-7">
               <h2>Servicios no realizados</h2>
               <ServicesList services={services} is_active={true}/>
             <h2>Servicios realizados</h2>

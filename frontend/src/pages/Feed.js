@@ -7,7 +7,7 @@ import PageLoading from '../components/PageLoading';
 import MachinesList from '../components/MachinesList';
 import api from '../api'
 import PageError from '../components/PageError';
-
+import Navbar from '../components/Navbar'
 
 class Feed extends  React.Component{
     state = {
@@ -53,6 +53,7 @@ class Feed extends  React.Component{
 
         return(
             <React.Fragment>
+              {/* <Navbar/> */}
                 <div className="Machines">
                     <div className="Machines__container">
                         {/* <div className="Machines__buttons">

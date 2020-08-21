@@ -5,6 +5,8 @@ import platziconfLogoImage from '../images/logod.svg';
 import SignupForm from '../components/SignupForm';
 import api from '../api';
 import MiniLoader from '../components/MiniLoader';
+import Navbar from '../components/Navbar';
+
 
 
 
@@ -60,6 +62,7 @@ class Signup extends React.Component{
     render(){
         return(
             <React.Fragment>
+            <Navbar />
                 <div className="Signup">
                     <div className="container">
                         <div className="Signup__col">
