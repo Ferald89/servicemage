@@ -50,8 +50,8 @@ THIRD_PARTY_APPS = [
 ]
 LOCAL_APPS = [
     'smanager.users.apps.UsersAppConfig',
-    'smanager.machines.apps.MachinesAppConfig',
     'smanager.services.apps.ServicesAppConfig',
+    'smanager.machines.apps.MachinesAppConfig',
 ]
 INSTALLED_APPS = DJANGO_APPS + THIRD_PARTY_APPS + LOCAL_APPS
 
