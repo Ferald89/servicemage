@@ -19,7 +19,6 @@ class MachineModelSerializer(serializers.ModelSerializer):
             'model',
             'about',
             'picture',
-            'next_service',
             'owner',
         )
 

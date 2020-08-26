@@ -10,12 +10,12 @@ from smanager.utils.models import SManageModel
 class Service(SManageModel):
     """Services models"""
 
-    owner_machine = models.ForeignKey(
-                    "users.User",
-                    on_delete=models.SET_NULL,
-                    null=True,
-                    verbose_name='Propietario de la Máquina'
-    )
+    # owner_machine = models.ForeignKey(
+    #                 "users.User",
+    #                 on_delete=models.SET_NULL,
+    #                 null=True,
+    #                 verbose_name='Propietario de la Máquina'
+    # )
 
     order_in = models.ForeignKey(
                         "machines.Machine",

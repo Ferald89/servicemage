@@ -4,13 +4,14 @@ import React from 'react';
 
 import './styles/BadgeDetails.css';
 import Machine from '../components/machine';
+import ManualList from '../components/ManualList';
 import ServicesList from '../components/ServicesList';
 
 
 function MachineDetails(props) {
   const machine = props.machine;
   const services = props.services.body.results;
-  
+  const manuals = props.machine.manual;
 
   return (
     <div>
@@ -45,6 +46,8 @@ function MachineDetails(props) {
             />
           </div>
           <div className="col-7">
+              <h2>Manuales</h2>
+              <ManualList manuals={manuals}/>
               <h2>Servicios no realizados</h2>
               <ServicesList services={services} is_active={true}/>
             <h2>Servicios realizados</h2>

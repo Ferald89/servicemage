@@ -15,7 +15,6 @@ class Machine(SManageModel):
     model = models.CharField('Modelo', max_length=140)
     about = models.CharField('Descripción De Máquina', max_length=255)
     picture = models.ImageField('Imagen', upload_to='machine/picture', blank=True, null=True)
-    next_service = models.DateTimeField('Proximo servicio')
 
     owner = models.ForeignKey(
                         "users.User",
@@ -23,6 +22,8 @@ class Machine(SManageModel):
                         null=False,
                         verbose_name='Propietario'
                 )
+
+    # manuals = models.ManyToManyField("machines.Manual", related_name='manuals', blank=True)
 
     def __str__(self):
         """Return Machine name."""

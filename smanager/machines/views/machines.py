@@ -8,11 +8,11 @@ from rest_framework.permissions import IsAuthenticated
 from smanager.machines.permissions.machines import IsMachineAdmin
 
 # Serializer
-from smanager.machines.serializers import MachineModelSerializer
+from smanager.machines.serializers import MachineModelSerializer, ManualModelSerializer
 from smanager.users.serializers import UserModelSerializer
 
 # Model
-from smanager.machines.models import Machine, Membership
+from smanager.machines.models import Machine, Membership, Manual
 from smanager.users.models import User
 
 
@@ -61,9 +61,15 @@ class MachineViewSet(
         user = User.objects.filter(
             id=response.data['owner'],
         )
+        machineobject = Machine.objects.get(serial_number=response.data['serial_number'])
+        # import ipdb; ipdb.set_trace()
+        manuals = Manual.objects.filter(
+            used_in=machineobject
+        )
         data = {
             'machine': response.data,
-            'user': UserModelSerializer(user, many=True).data
+            'user': UserModelSerializer(user, many=True).data,
+            'manual': ManualModelSerializer(manuals, many=True).data,
         }
         response.data = data
         return response

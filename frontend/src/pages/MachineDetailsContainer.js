@@ -12,6 +12,7 @@ class MachineDetailsContainer extends React.Component {
     error: null,
     data: undefined,
     service: undefined,
+    manual: undefined,
   };
 
   componentDidMount() {
@@ -24,6 +25,8 @@ class MachineDetailsContainer extends React.Component {
     console.log(this.props.match.params.machineserial_number);
     try {
       const data = await api.badges.read(this.props.match.params.machineserial_number);
+      // console.log(data.body.manual);
+      
       const services = await api.badges.readservice(this.props.match.params.machineserial_number);
       this.setState({ loading: false, data: data.body, services: services});
     } catch (error) {

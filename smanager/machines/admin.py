@@ -4,7 +4,7 @@
 from django.contrib import admin
 
 # Models
-from smanager.machines.models import Machine
+from smanager.machines.models import Machine, Manual
 
 
 # @admin.register(Machine)
@@ -16,4 +16,5 @@ from smanager.machines.models import Machine
 #     # list_filter = ('service_taken',)
 
 
+admin.site.register(Manual)
 admin.site.register(Machine)

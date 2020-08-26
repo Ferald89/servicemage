@@ -23,7 +23,6 @@ class MAchinesListItem extends React.Component {
             Modelo: {this.props.machine.model}
             <br />
             Acerca de :{this.props.machine.about}<br />
-            Proximo Servicio :{this.props.machine.next_service}
           </div>
          </div>
       );
@@ -43,7 +42,6 @@ class MAchinesListItem extends React.Component {
           Modelo: {this.props.machine.model}
           <br />
           Acerca de :{this.props.machine.about}<br />
-          Proximo Servicio :{this.props.machine.next_service}
         </div>
        </div>
     );
